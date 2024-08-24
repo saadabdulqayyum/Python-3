@@ -1,0 +1,192 @@
+1.# Accepting the percentage from the user
+percentage = float(input("Enter your percentage: "))
+
+# Determining the grade based on the percentage
+if percentage > 90:
+    grade = 'A'
+elif 80 < percentage <= 90:
+    grade = 'B'
+elif 60 <= percentage <= 80:
+    grade = 'C'
+else:
+    grade = 'D'
+
+# Displaying the grade
+print(f"Your grade is: {grade}")
+Explanation:
+The program first prompts the user to enter their percentage.
+It then uses conditional statements to check the percentage and determine the corresponding grade:
+Grade A if the percentage is greater than 90.
+Grade B if the percentage is between 80 and 90 (inclusive).
+Grade C if the percentage is between 60 and 80 (inclusive).
+Grade D if the percentage is below 60
+
+2.# Accepting the cost price of the bike from the user
+cost_price = float(input("Enter the cost price of the bike (in Rs): "))
+
+# Determining the road tax based on the cost price
+if cost_price > 100000:
+    tax_percentage = 15
+elif 50000 < cost_price <= 100000:
+    tax_percentage = 10
+else:
+    tax_percentage = 5
+
+# Calculating the road tax
+road_tax = (tax_percentage / 100) * cost_price
+
+# Displaying the road tax
+print(f"The road tax to be paid is: Rs {road_tax:.2f} ({tax_percentage}% of Rs {cost_price:.2f})")
+Explanation:
+The program first prompts the user to enter the cost price of the bike.
+It then uses conditional statements to determine the road tax percentage based on the cost price:
+15% tax if the cost price is greater than Rs 100,000.
+10% tax if the cost price is between Rs 50,000 and Rs 100,000 (inclusive).
+5% tax if the cost price is Rs 50,000 or less.
+The road tax is calculated by applying the appropriate percentage to the cost price.
+
+4. Check how many times a given number can be divided by 3 before it is less than or equal to 10.
+Here’s the Python program to do that:
+
+python
+Copy code
+# Accepting the number from the user
+number = int(input("Enter a number: "))
+
+# Initializing the count
+count = 0
+
+# Dividing the number by 3 until it is less than or equal to 10
+while number > 10:
+    number = number // 3
+    count += 1
+
+# Displaying the result
+print(f"The number can be divided by 3, {count} times before it is less than or equal to 10.")
+5. Why and When to Use while Loop in Python
+Why Use a while Loop?
+
+Indefinite Iteration: Use a while loop when you want to repeat a block of code an unknown number of times until a condition is met. Unlike for loops, which iterate over a sequence of elements, while loops are more flexible and can handle scenarios where you don’t know in advance how many times the loop will run.
+When to Use a while Loop?
+
+Condition-Based Looping: When you need to repeat actions based on a condition that might change during the loop’s execution.
+Input Validation: When you need to keep asking the user for input until they provide valid data.
+Waiting for a State Change: When your program needs to keep running or waiting for something to happen (e.g., waiting for a resource to become available).
+Example:
+
+python
+Copy code
+# Example: User must guess a number between 1 and 10
+secret_number = 7
+guess = None
+
+while guess != secret_number:
+    guess = int(input("Guess the number (between 1 and 10): "))
+    if guess < secret_number:
+        print("Too low! Try again.")
+    elif guess > secret_number:
+        print("Too high! Try again.")
+
+print("Congratulations! You guessed the right number.")
+6. Use Nested while Loop to Print 3 Different Patterns
+Here are three different patterns using nested while loops:
+
+Pattern 1: Right-Angled Triangle
+
+python
+Copy code
+# Pattern 1: Right-Angled Triangle
+rows = 5
+i = 1
+while i <= rows:
+    j = 1
+    while j <= i:
+        print("*", end="")
+        j += 1
+    print()
+    i += 1
+Output:
+
+markdown
+Copy code
+*
+**
+***
+****
+*****
+Pattern 2: Inverted Right-Angled Triangle
+
+python
+Copy code
+# Pattern 2: Inverted Right-Angled Triangle
+rows = 5
+i = rows
+while i >= 1:
+    j = 1
+    while j <= i:
+        print("*", end="")
+        j += 1
+    print()
+    i -= 1
+Output:
+
+markdown
+Copy code
+*****
+****
+***
+**
+*
+Pattern 3: Pyramid
+
+python
+Copy code
+# Pattern 3: Pyramid
+rows = 5
+i = 1
+while i <= rows:
+    # Print leading spaces
+    j = rows
+    while j > i:
+        print(" ", end="")
+        j -= 1
+    # Print stars
+    k = 1
+    while k <= (2*i - 1):
+        print("*", end="")
+        k += 1
+    print()
+    i += 1
+Output:
+
+markdown
+Copy code
+    *
+   ***
+  *****
+ *******
+*********
+7. Reverse a while Loop to Display Numbers from 10 to 1
+Here’s the Python program for that:
+
+python
+Copy code
+# Initialize the starting number
+number = 10
+
+# Reverse loop from 10 to 1
+while number >= 1:
+    print(number)
+    number -= 1
+8. Reverse a while Loop to Display Numbers from 10 to 1 (Again)
+This question is the same as the previous one, so the program is identical:
+
+python
+Copy code
+# Initialize the starting number
+number = 10
+
+# Reverse loop from 10 to 1
+while number >= 1:
+    print(number)
+    number -= 1
